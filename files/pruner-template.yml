@@ -52,6 +52,9 @@ objects:
           from:
             kind: ImageStreamTag
             name: 'rhel7:latest'
+          env:
+          - name: OC_URL
+            value: ${OC_URL}
       output:
         to:
           kind: ImageStreamTag
@@ -96,9 +99,7 @@ objects:
               env:
                 - name: TZ
                   value: ${TIMEZONE}
-                - name: OC_URL
-                  value: ${OC_URL}
-    status: {}
+       status: {}
 parameters:
   - description: 'APPUiO pruner Git repository'
     name: PRUNER_SOURCE
