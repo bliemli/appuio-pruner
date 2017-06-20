@@ -113,6 +113,7 @@ parameters:
     value: UTC
     required: true
   - description: 'URL of oc client'
+    name: OC_URL
     value: https://console.appuio.ch/console/extensions/clients/linux/oc
     required: true
  
