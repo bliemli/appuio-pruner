@@ -10,5 +10,5 @@ export PROJECT=appuio-infra
 oc new-project $PROJECT
 oc adm policy add-cluster-role-to-user edit system:serviceaccount:$PROJECT:default
 oc adm policy add-cluster-role-to-user system:image-pruner system:serviceaccount:$PROJECT:default
-oc new-app https://github.com/appuio/appuio-pruner
+oc new-app -n $PROJECT https://github.com/appuio/appuio-pruner
 ```
