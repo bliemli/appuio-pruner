@@ -10,6 +10,5 @@ RUN cd /usr/local/bin && \
 ENV HOME /tmp/
 
 COPY pruner.sh /tmp/
-COPY jobs-cleaner.py /tmp/
 
 ENTRYPOINT ["/tmp/pruner.sh"]
